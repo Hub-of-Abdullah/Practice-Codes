@@ -10,7 +10,7 @@ int maxPointCollection(int i, int j, int n){
 
     for(int ind = i; ind <=j; ind++){
         int l = (i==0)? 1:points[i-1];
-        int r = (i==n-1)? 1:points[j+1];
+        int r = (j==n-1)? 1:points[j+1];
         int point = maxPointCollection(i, ind-1, n) + maxPointCollection(ind+1, j, n);
         if(i==0 && j==n-1) point += points[ind];
         else point += (l*r);
