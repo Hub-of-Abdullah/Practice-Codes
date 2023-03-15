@@ -13,7 +13,7 @@ void minCostForMrLee(int src, int cntNode, int cost){
         }
     }
     for(int i =1; i<=n; i++){
-        if(grid[i][src] !=0 && !visited[i]){
+        if(grid[src][i] !=0 && !visited[i]){
             visited[i] = true;
             minCostForMrLee(i, cntNode+1, cost+grid[i][src]);
             visited[i] = false;
