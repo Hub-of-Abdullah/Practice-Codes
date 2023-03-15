@@ -51,7 +51,7 @@ void bfs(int root, int n, int time){
             for(auto child : graph[u]){
                 int v = child.f;
                 double w = child.s;
-                if(v != u){
+                if(v != u){ //For self loop avoiding 
                     prob[v] += prob[u]*w;
                     if(maxPro < prob[v]){
                         maxPro = prob[v];
