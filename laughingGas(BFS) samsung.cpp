@@ -37,7 +37,7 @@ int main(){
                 tmpNode2.level = 1 + tmpNode1.level;
                 ans = tmpNode2.level;
                 if(grid[tmpNode2.x ][tmpNode2.y]==1){// only for not visited and person full cell
-                    grid[tmpNode2.x][tmpNode2.y] = 2;
+                    grid[tmpNode2.x][tmpNode2.y] = 2;// 2 for visited
                     Q.push(tmpNode2);
                 }
             }
