@@ -45,18 +45,18 @@ int main()
 {
     int testCase,sX,sY,tX,tY;
     cin>>testCase;
-    for(int i =1; i<=testCase; i++){
+    for(int j=1; j<=testCase; j++){
 
         cin>>sX>>sY>>tX>>tY;
         cin>>totalHole;
-        for(int j =0; j<totalHole; j++)
+        for(int i =0; i<totalHole; i++)
         {
             cin>>grid[i][0]>>grid[i][1]>>grid[i][2]>>grid[i][3]>>grid[i][4];
         }
         ans =INT_MAX;
         bool visited[totalHole] = {false};
         minimumCostToReachGoal(sX,sY,tX,tY,visited,0);
-        cout << "Case " <<testCase<< "# " << ans<< endl;
+        cout << "Case " <<j<< "# " << ans<< endl;
     }
 
     return 0;
